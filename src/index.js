@@ -12,15 +12,15 @@ const navLink = document.querySelectorAll(".nav-link");
 
 navLink.forEach(element=>{
     element.addEventListener("click", (e) => {
-        e.style.color = "red";
+        e.target.style.color = "red";
         e.preventDefault();
     })
     element.addEventListener("mouseover", (e) => {
-        e.style.color = "blue";
+        e.target.style.color = "blue";
     
     });
     element.addEventListener("mouseout", (e) => {
-        e.style.color = "black";
+        e.target.style.color = "black";
     
     });
 });
@@ -29,17 +29,17 @@ navLink.forEach(element=>{
 const baslikH1 = document.querySelector("h1");
 
 baslikH1.addEventListener("mouseover", (e) => {
-    e.style.textColor = "blue";
-    e.style.cursor = "pointer";
-    e.textContent = "!!Eğlence Otobüsü!!";
-    e.style.fontSize = "200%";
+    e.target.style.color = "#17A2B8";
+    e.target.style.cursor = "pointer";
+    e.target.textContent = "Eğlence Otobüsü!";
+    e.target.style.fontSize = "4.5rem";
 
 });
 
 baslikH1.addEventListener("mouseout", (e) => {
-    e.style.color = "black";
-    e.textContent = "Eğlence Otobüsü";
-    e.style.fontSize = "100%";
+    e.target.style.color = "black";
+    e.target.textContent = "Eğlence Otobüsü";
+    e.target.style.fontSize = "4rem";
 });
 
 
@@ -47,34 +47,33 @@ baslikH1.addEventListener("mouseout", (e) => {
 const button = document.querySelectorAll(".btn");
 button.forEach(element=>{
     element.addEventListener("mouseover", (e) => {
-        e.style.color = "red";
-        e.style.fontSize = "40px"        
+        e.target.style.color = "#17A2B8";
+        e.target.style.fontSize = "3rem"        
     });
     element.addEventListener("mouseout", (e) => {
-        e.style.color = "red";
-        e.style.fontSize = "20px"        
+        e.target.style.color = "white";
+        e.target.style.fontSize = "2.5rem"        
     });
 
     element.addEventListener("click", (e) => {
-        e.textContent = "! ! !";
+        e.target.textContent = "! ! !";
         
     });
 });
 
 
 
-const header = document.getElementByClassName('main-navigation');
-const sticky = header.offsetTop;
+// const header = document.getElementByClassName('main-navigation');
+// const sticky = header.offsetTop;
 
-window.addEventListener('scroll', function () {
-    if (window.pageYOffset > sticky) {
-        header.classList.add("sticky");
-    } else {
-        header.classList.remove("sticky");
-    }
-});
+// window.addEventListener('scroll', function () {
+//     if (window.pageYOffset > sticky) {
+//         header.classList.add("sticky");
+//     } else {
+//         header.classList.remove("sticky");
+//     }
+// });
 
-// navigation.less içine eklediğim class ve styling:
 
 //  .sticky {
 //     position: fixed;
